@@ -1,0 +1,14 @@
+.footer-container{
+    height:50px;
+    background-color:var(--footer-bg);
+    color:var(--white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+.footer-light{
+  background-color: var(--light-bg);
+  border-top:solid 1px var(--dark-bg);
+  color:black;
+}
