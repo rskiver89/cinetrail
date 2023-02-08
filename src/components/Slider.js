@@ -7,10 +7,10 @@ import {Link} from 'react-router-dom'
 function Slider({apiKey, baseUrl}) {
   const [upcomingMovies, setUpcomingMovies]=useState([])
   const [index, setIndex]=useState(0)
-  const imageBaseUrl="https://image.tmdb.org/t/p/w500"
+  const imageBaseUrl=process.env.REACT_APP_IMAGE_BASE_URL
 
   useEffect(() => {
-    axios.get(`https://api.themoviedb.org/3/movie/upcoming?api_key=${apiKey}`)
+    axios.get(`${baseUrl}/movie/upcoming?api_key=${apiKey}`)
     .then(res=>{
       console.log(res.data.results)
       setUpcomingMovies(res.data.results)
