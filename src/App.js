@@ -8,6 +8,7 @@ import Footer from './components/Footer.js'
 function App() {
   const apiKey = process.env.REACT_APP_API_KEY
   const baseUrl = process.env.REACT_APP_API_BASE_URL
+  const imageBaseUrl = process.env.REACT_APP_IMAGE_BASE_URL
   return (
     <div>
       <BrowserRouter>
