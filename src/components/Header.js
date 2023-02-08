@@ -25,15 +25,17 @@ function Header() {
      <div className="theme-button-container">
 
         {   
-        darkMode 
-        ? <div className="theme-buttons">
-        <MdOutlineLightMode onClick={handleTheme} className="theme-icon"/>
-        <MdOutlineNightlight className="theme-icon theme-icon-active"/>
-        </div>
-        : <div className="theme-buttons">
-         <MdOutlineNightlight className="theme-icon theme-icon-active"/>
-         <MdOutlineLightMode onClick={handleTheme} className="theme-icon"/>
-        </div>
+      darkMode
+      ? <div className="theme-buttons">
+      <MdOutlineLightMode onClick={handleTheme} className="theme-icon "/>
+      <MdOutlineNightlight  className="theme-icon theme-icon-active"/>
+      
+      </div>
+      : <div className="theme-buttons">
+      <MdOutlineLightMode  className="theme-icon theme-icon-active"/>
+      <MdOutlineNightlight  onClick={handleTheme} className="theme-icon"/>
+      
+      </div>
         }
         
      </div>

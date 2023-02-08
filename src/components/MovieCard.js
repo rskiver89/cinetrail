@@ -22,7 +22,6 @@ function MovieCard({data, cardStyle, imageUrl, height, radius}) {
             <div className="movie-info-bottom">
                 <p>
                 {data?.title}
-                popular
                 </p>
             </div>
         </div>
