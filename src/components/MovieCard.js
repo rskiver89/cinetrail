@@ -1,7 +1,11 @@
-import React from 'react'
+import React, { useState, useContext } from 'react'
 import '../styles/Movie.css'
+import Rating from './Rating'
+import { ThemeContext } from '../context/ThemeContext';
 
 function MovieCard({data, cardStyle, imageUrl, height, radius}) {
+    const {darkMode, setDarkMode}=useContext(ThemeContext);
+    const [movieRating, setMovieRating] = useState(0)
     const imageBaseUrl=process.env.REACT_APP_IMAGE_BASE_URL
     const imageStyle={
         backgroundImage: `url("${imageBaseUrl}/${imageUrl}")`,
@@ -17,7 +21,7 @@ function MovieCard({data, cardStyle, imageUrl, height, radius}) {
     <div className={cardStyle}>
         <div style={imageStyle}>
             <div className="movie-info-top">
-                rating:
+                rating: <Rating movieRating={movieRating} />
             </div>
             <div className="movie-info-bottom">
                 <p>
@@ -27,7 +31,7 @@ function MovieCard({data, cardStyle, imageUrl, height, radius}) {
         </div>
         {
             cardStyle==="top-rated-card"
-            ? <p> {data.title} </p>
+            ? <p className={darkMode ? "top-rated-card" : "top-rated-card top-rated-card-light"}> {data.title} </p>
             :null
         }
 </div>
