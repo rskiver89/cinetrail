@@ -53,7 +53,7 @@ function Homepage({apiKey, baseUrl}) {
             </div>
 
         </div>
-              <div className="top-rated-container">
+              <div className={darkMode ? "top-rated-container" : "top-rated-container top-rated-container-light"}>
                 <div className="top-rated-cards-wrapper">
                 <h3>Top Rated</h3>
               {

@@ -41,6 +41,11 @@
 .top-rated-card p {
     margin-top:10px;
 }
+
+.top-rated-card-light {
+    color: black;
+}
+
 @keyframes myAnim {
 	0% {
 		visibility: hidden;

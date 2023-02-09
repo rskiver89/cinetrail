@@ -45,6 +45,11 @@
     /* padding:20px 0; */
     /* margin-top:40px; */
 }
+
+.top-rated-container-light {
+    color: black;
+}
+
 .top-rated-cards-wrapper{
     display: flex;
     flex-wrap: wrap;
