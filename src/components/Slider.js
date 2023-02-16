@@ -55,7 +55,7 @@ function Slider({apiKey, baseUrl}) {
         <p className='slider-description'>{upcomingMovies[index]?.overview.slice(0, 130)}...</p>
         <Genres movieGenres={upcomingMovies[index]?.genre_ids} apiKey={apiKey} baseUrl={baseUrl} />
         <p>Release Date: {upcomingMovies[index]?.release_date}</p>  
-        <Rating movieRating={movieRating} />
+        <Rating movieRating={movieRating/2} />
         <Link to={`/moviedetails/${upcomingMovies[index]?.id}`}>See Details</Link>
       </div>
     </div>

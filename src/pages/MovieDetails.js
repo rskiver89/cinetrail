@@ -15,7 +15,7 @@ function MovieDetails(baseUrl, apiKey) {
     const {movieid} = useParams()
     const [videoLink, setVideoLink] = useState('')
     const [movieRating, setMovieRating] = useState(0)
-    const [reviews, setReviews] = useState(3)
+    const [reviews, setReviews] = useState([])
     const [reviewNumber, setReviewNumber] = useState(0)
     const [totalReviews, setTotalReviews] = useState(0)
     const imageBase=process.env.REACT_APP_IMAGE_BASE_URL
