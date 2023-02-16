@@ -56,7 +56,7 @@ function Slider({apiKey, baseUrl}) {
         <Genres movieGenres={upcomingMovies[index]?.genre_ids} apiKey={apiKey} baseUrl={baseUrl} />
         <p>Release Date: {upcomingMovies[index]?.release_date}</p>  
         <Rating movieRating={movieRating} />
-        <Link to={'/'}>See Details</Link>
+        <Link to={`/moviedetails/${upcomingMovies[index]?.id}`}>See Details</Link>
       </div>
     </div>
   )
