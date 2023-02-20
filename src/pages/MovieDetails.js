@@ -29,15 +29,15 @@ function MovieDetails({baseUrl, apiKey}) {
             setMovie(res.data);
           })
           .catch(err => console.log(err));
+
     
-        axios.get(`${baseUrl}/movie/${movieid}/videos?api_key=${apiKey}`)
+          axios.get(`${baseUrl}/movie/${movieid}/videos?api_key=${apiKey}`)
           .then(res => {
-            const youtubeLink = res.data.results.find(item => item.site === 'YouTube' && item.type === 'Trailer');
-            if (youtubeLink) {
-              setVideoLink(youtubeLink.key);
-            }
+              const youtubeLink = res.data.results.filter(item=>item.site==="YouTube" && item.type==="Trailer")
+              setVideoLink(youtubeLink[0].key)
           })
-          .catch(err => console.log(err));
+      .catch(err => console.log(err));
+
     
         axios.get(`${baseUrl}/movie/${movieid}/reviews?api_key=${apiKey}`)
           .then(res => {
@@ -83,7 +83,7 @@ function MovieDetails({baseUrl, apiKey}) {
                         <h4>{movie?.overview}</h4>
                         <h4>Status: {movie?.status}</h4>
                         <h4>Runtime: {movie?.runtime} min</h4>
-                        <h4>Budget: ${movie?.budget}</h4>
+                        <h4>Budget: {movie?.budget}</h4>
                         <h4>Genres: {movie?.genres?.map(genre => genre.name).join(', ')}</h4>
                     </div>
                 </div>
