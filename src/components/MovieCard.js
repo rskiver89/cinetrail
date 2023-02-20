@@ -21,7 +21,7 @@ function MovieCard({data, cardStyle, imageUrl, height, radius}) {
     <div className={cardStyle}>
         <div style={imageStyle}>
             <div className="movie-info-top">
-                rating: <Rating movieRating={movieRating/2} />
+                Rating: <Rating movieRating={movieRating/2} />
             </div>
             <div className="movie-info-bottom">
                 <p>

@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react'
 import axios from 'axios'
 import { MdKeyboardArrowRight, MdKeyboardArrowLeft } from 'react-icons/md'
 import '../styles/Slider.css'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import Rating from '../components/Rating'
 import Genres from '../components/Genres'
 
@@ -15,7 +15,7 @@ function Slider({apiKey, baseUrl}) {
   useEffect(() => {
     axios.get(`${baseUrl}/movie/upcoming?api_key=${apiKey}`)
     .then(res=>{
-      console.log(res.data.results)
+      // console.log(res.data.results)
       setUpcomingMovies(res.data.results)
       setMovieRating(res.data.results[index].vote_average)
     })
@@ -23,7 +23,7 @@ function Slider({apiKey, baseUrl}) {
   }, [index])
 
   const sliderStyle = {
-    backgroundImage:`url("https://image.tmdb.org/t/p/w500/${upcomingMovies[index]?.backdrop_path}")`,
+    backgroundImage:`url("${imageBaseUrl}/${upcomingMovies[index]?.backdrop_path}")`,
     backgroundSize: "cover",
     backgroundPosition: "center",
     height: "60vh",
@@ -60,6 +60,6 @@ function Slider({apiKey, baseUrl}) {
       </div>
     </div>
   )
-}
+} 
 
 export default Slider
