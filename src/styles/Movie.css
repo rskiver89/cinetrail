@@ -6,8 +6,8 @@
     visibility: hidden;
     position:absolute;
     top:0;
-    padding:8px;
-    color:var(--red);
+    padding:5px;
+    color: var(--red);
 }
 .movie-info-bottom{
     visibility: hidden;
