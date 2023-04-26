@@ -16,7 +16,7 @@ function Review({ review }) {
   return (
     <div className='review'>
         <div className='avatar-container'>
-            <img className='avatar' src={imageError ? avatar : `${imageBase}/${review?.author_details.avatar_path}`} onError={()=>setImageError(true)} />
+            <img className='avatar' src={imageError ? avatar : `${imageBase}/${review?.author_details.avatar_path}`} onError={()=>setImageError(true)} style={{width:"10%", margin:"8px 0"}} />
         </div>
         <p>{review?.author}</p>
 

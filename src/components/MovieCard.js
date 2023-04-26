@@ -18,6 +18,7 @@ function MovieCard({data, cardStyle, imageUrl, height, radius}) {
         borderRadius: radius,
         position: "relative"
     }
+    
   return (
     <Link to={`/moviedetails/${data?.id}`} className={cardStyle}>
         <div style={imageStyle}>
